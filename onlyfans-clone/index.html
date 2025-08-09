@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OnlyFans UI Clone - Creator Page</title>
+    <meta name="description" content="A static clone of an OnlyFans creator page UI for demo purposes." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230095f6'/%3E%3Ctext x='50' y='62' font-size='56' text-anchor='middle' fill='white' font-family='Arial, Helvetica, sans-serif'%3EOF%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">OF</div>
+          <span class="brand-text">OnlyFans</span>
+        </div>
+        <div class="search">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5Zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14Z"/></svg>
+          <input id="globalSearch" type="search" placeholder="Search creators" />
+        </div>
+        <nav class="actions">
+          <button class="icon-btn" aria-label="Notifications">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7v3.586l-1.707 1.707A1 1 0 0 0 4 16h16a1 1 0 0 0 .707-1.707L19 12.586V9a7 7 0 0 0-7-7Zm0 20a3 3 0 0 0 3-3H9a3 3 0 0 0 3 3Z"/></svg>
+          </button>
+          <button class="icon-btn" aria-label="Messages">
+            <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg>
+          </button>
+          <button class="avatar-btn" aria-label="Profile">
+            <span class="avatar avatar-sm" data-initials="TH"></span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="creator-hero">
+        <div class="creator-cover" role="img" aria-label="Creator cover image"></div>
+        <div class="container creator-hero-inner">
+          <div class="creator-avatar">
+            <span class="avatar avatar-xl" data-initials="TH"></span>
+          </div>
+          <div class="creator-meta">
+            <div class="name-row">
+              <h1 class="creator-name">Tayler Hills</h1>
+              <span class="creator-badge">Verified</span>
+            </div>
+            <div class="creator-handle">@taylerhillss</div>
+            <div class="creator-stats">
+              <span><strong>217</strong> Posts</span>
+              <span><strong>143</strong> Media</span>
+              <span><strong>12.5k</strong> Likes</span>
+            </div>
+          </div>
+          <div class="creator-cta">
+            <button id="subscribeBtn" class="btn btn-primary">
+              Subscribe $9.99 / month
+            </button>
+            <button class="btn btn-ghost">Message</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="container layout">
+        <aside class="sidebar">
+          <div class="card about">
+            <h2>About</h2>
+            <p>Welcome to my page! Subscribe to unlock exclusive posts and behind-the-scenes content.</p>
+            <ul class="about-list">
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 6h-8l-2-2H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2Z"/></svg>
+                <span>Joined Jan 2024</span>
+              </li>
+              <li>
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 1 0 0 14 7 7 0 0 0 0-14Zm-1 10V7h2v5h-2Zm1 4a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"/></svg>
+                <span>Content may be locked</span>
+              </li>
+            </ul>
+          </div>
+          <div class="card perks">
+            <h2>Subscription perks</h2>
+            <ul class="perk-list">
+              <li>Exclusive photos and videos</li>
+              <li>Direct messages</li>
+              <li>Behind-the-scenes</li>
+            </ul>
+          </div>
+        </aside>
+
+        <section class="feed">
+          <div class="tabs" role="tablist" aria-label="Creator content tabs">
+            <button class="tab is-active" role="tab" aria-selected="true" data-tab="posts">Posts</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="media">Media</button>
+            <button class="tab" role="tab" aria-selected="false" data-tab="likes">Likes</button>
+          </div>
+
+          <div id="tabContent">
+            <div class="post card">
+              <div class="post-header">
+                <span class="avatar" data-initials="TH"></span>
+                <div class="post-meta">
+                  <div class="post-author">Tayler Hills</div>
+                  <div class="post-sub">2 hours ago · Locked</div>
+                </div>
+                <button class="btn btn-ghost btn-sm">Follow</button>
+              </div>
+              <div class="post-body">
+                <p>New set dropping later tonight ✨</p>
+                <div class="media locked">
+                  <div class="lock-overlay">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18 8h-1V6a5 5 0 1 0-10 0v2H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Zm-7 0V6a3 3 0 1 1 6 0v2h-6Z"/></svg>
+                    <div>Subscribe to unlock</div>
+                  </div>
+                </div>
+              </div>
+              <div class="post-actions">
+                <button class="icon-btn" aria-label="Like"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1 8.64 12 8.77l-.1-.13C10.14 6.6 7.1 6.24 5.36 8c-1.9 1.9-1.53 5.04.88 6.91L12 20.35l5.76-5.44c2.41-1.87 2.78-5.01.88-6.91-1.74-1.76-4.78-1.4-6.54.65Z"/></svg> 1.2k</button>
+                <button class="icon-btn" aria-label="Comment"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg> 140</button>
+                <button class="icon-btn" aria-label="Share"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.23 3.23 0 0 0 0-1.39l7-4.11A2.99 2.99 0 1 0 14 4a2.98 2.98 0 0 0 .04.49l-7 4.11a3 3 0 1 0 0 6l7.04 4.14c-.02.12-.04.25-.04.38a3 3 0 1 0 3-3.04Z"/></svg></button>
+              </div>
+            </div>
+
+            <div class="post card">
+              <div class="post-header">
+                <span class="avatar" data-initials="TH"></span>
+                <div class="post-meta">
+                  <div class="post-author">Tayler Hills</div>
+                  <div class="post-sub">Yesterday · Public</div>
+                </div>
+                <button class="btn btn-ghost btn-sm">Tip</button>
+              </div>
+              <div class="post-body">
+                <p>Weekend vibes 🌿</p>
+                <div class="media photo">
+                  <div class="photo-placeholder"></div>
+                </div>
+              </div>
+              <div class="post-actions">
+                <button class="icon-btn" aria-label="Like"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12.1 8.64 12 8.77l-.1-.13C10.14 6.6 7.1 6.24 5.36 8c-1.9 1.9-1.53 5.04.88 6.91L12 20.35l5.76-5.44c2.41-1.87 2.78-5.01.88-6.91-1.74-1.76-4.78-1.4-6.54.65Z"/></svg> 892</button>
+                <button class="icon-btn" aria-label="Comment"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4a2 2 0 0 0-2 2v16l4-4h14a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2Z"/></svg> 63</button>
+                <button class="icon-btn" aria-label="Share"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7a3.23 3.23 0 0 0 0-1.39l7-4.11A2.99 2.99 0 1 0 14 4a2.98 2.98 0 0 0 .04.49l-7 4.11a3 3 0 1 0 0 6l7.04 4.14c-.02.12-.04.25-.04.38a3 3 0 1 0 3-3.04Z"/></svg></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div>OnlyFans UI Clone · For demo purposes only</div>
+      </div>
+    </footer>
+
+    <div class="mobile-subscribe-bar">
+      <button class="btn btn-primary btn-block">Subscribe $9.99 / month</button>
+    </div>
+
+    <script src="./app.js" defer></script>
+  </body>
+</html>
